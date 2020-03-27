@@ -66,7 +66,7 @@ public class Sac {
 		this.jetons = jetons;
 	}
 	
-	public Jeton random() throws SacVide{
+	public Jeton random(){
 		Random rand = new Random();
 		int i = rand.nextInt(this.jetons.size());
 		return this.jetons.remove(i);

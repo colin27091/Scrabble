@@ -3,7 +3,7 @@ package exception;
 public class SacVide extends Exception{
 	
 	public SacVide() {
-		super();
+		System.out.println("Le Sac est Vide");
 	}
 
 }
