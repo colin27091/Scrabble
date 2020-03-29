@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,15 +9,13 @@ import model.Jeton;
 import model.Plateau;
 import model.Player;
 import model.Sac;
+import tool.Tool;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		List<Integer> s = new ArrayList<Integer>();
-		s.add(1);
-		s.add(2);
-		System.out.println(s.toArray());
+		Partie p = new Partie(Arrays.asList("Colin", "Charlotte"));
 		 
 	}
 

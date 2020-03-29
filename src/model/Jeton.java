@@ -26,5 +26,8 @@ public class Jeton {
 		this.value = value;
 	}
 	
+	public String toString() {
+		return String.valueOf(this.letter);
+	}
 
 }

@@ -4,6 +4,7 @@ import java.util.Map;
 
 import exception.SacVide;
 import model.*;
+import tool.Tool;
 
 public class Partie {
 	
@@ -11,6 +12,7 @@ public class Partie {
 	public Sac sac;
 	public Plateau plateau;
 	public List<String> mots;
+	public List<String> dictionnaire;
 	
 	public Partie(List<String> names){
 		
@@ -18,10 +20,11 @@ public class Partie {
 		sac = new Sac();
 		plateau = new Plateau();
 		mots = new ArrayList<String>();
+		dictionnaire = Tool.extractDict();
 		
 		for(String name: names) {
 			List<Jeton> t = new ArrayList<Jeton>();
-			for(int i =0; i<7 ; i++) {
+			for(int i = 0; i<7 ; i++) {
 				t.add(this.sac.random());
 			}
 			this.players.add(new Player(name, t));
@@ -44,10 +47,7 @@ public class Partie {
 			}
 			//liste.add(s.split("\\s+"));
 		}
-			
-			
-			
-		}
+	}
 
 	
 
