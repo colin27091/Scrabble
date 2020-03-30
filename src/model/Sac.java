@@ -9,11 +9,9 @@ import exception.SacVide;
 public class Sac {
 	
 	final static int N = 102;
-	private static int n;
 	public List<Jeton> jetons;
 	
-	public Sac() {
-		n = N; 
+	public Sac() { 
 		jetons = new ArrayList<Jeton>();
 		for(int i = 0; i < 2; i++) { jetons.add(new Jeton(' ', 0));}//joker
 		for(int i = 0; i < 15; i++) {jetons.add(new Jeton('E', 1));}
@@ -48,14 +46,6 @@ public class Sac {
 		jetons.add(new Jeton('X', 10));
 		jetons.add(new Jeton('Y', 10));
 		jetons.add(new Jeton('X', 10));	
-	}
-
-	public static int getN() {
-		return n;
-	}
-
-	public static void setN(int n) {
-		Sac.n = n;
 	}
 
 	public List<Jeton> getJetons() {
