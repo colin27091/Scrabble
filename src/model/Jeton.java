@@ -1,13 +1,19 @@
 package model;
 
+import javax.swing.JFrame;
+
+import view.JJeton;
+
 public class Jeton {
 	
 	private char letter;
 	private int value;
+	public JJeton jjeton;
 	
 	public Jeton(char l, int v) {
 		this.letter = l;
 		this.value = v;
+		this.jjeton = new JJeton(this);
 	}
 
 	public char getLetter() {

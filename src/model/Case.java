@@ -1,16 +1,18 @@
 package model;
 
+import view.JCase;
+
 public class Case {
 	
 	Jeton jeton;
 	Count count;
+	JCase jcase;
 	
-	public Case() {
-		
-	}
-	
+
 	public Case(Count c) {
 		this.count = c;
+		this.jcase = new JCase(this);
+		
 	}
 
 	public Jeton getJeton() {
@@ -28,6 +30,15 @@ public class Case {
 	public void setCount(Count count) {
 		this.count = count;
 	}
+
+	public JCase getJcase() {
+		return jcase;
+	}
+
+	public void setJcase(JCase jcase) {
+		this.jcase = jcase;
+	}
+	
 	
 	
 	
